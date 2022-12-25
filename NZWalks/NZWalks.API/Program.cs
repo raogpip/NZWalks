@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using NZWalks.API.Data;
+using NZWalks.API.Repos;
 
 internal class Program
 {
@@ -18,7 +19,11 @@ internal class Program
             options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalks"));
         });
 
-var app = builder.Build();
+        builder.Services.AddScoped<IRegionRepository, RegionRepo>();
+
+        builder.Services.AddAutoMapper(typeof(Program).Assembly);
+
+        var app = builder.Build();
 
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
