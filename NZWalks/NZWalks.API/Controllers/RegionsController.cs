@@ -19,7 +19,6 @@ namespace NZWalks.API.Controllers
             this.mapper = mapper;
         }
 
-        public IMapper Mapper { get; }
 
         [HttpGet]
         public async Task<IActionResult> GetAllRegionsAsync()
