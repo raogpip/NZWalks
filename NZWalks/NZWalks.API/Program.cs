@@ -21,6 +21,7 @@ internal class Program
 
         builder.Services.AddScoped<IRegionRepository, RegionRepo>();
         builder.Services.AddScoped<IWalkRepository, WalkRepo>();
+        builder.Services.AddScoped<IWalkDifficultyRepository, WalkDifficultyRepo>();
 
         builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
