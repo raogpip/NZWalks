@@ -45,8 +45,8 @@ namespace NZWalks.API.Controllers
             Models.DTO.AddWalkDifficultyRequest addWalkDifficultyRequest)
         {
             // Validate request
-            if (!ValidateAddWalkDifficultyAsync(addWalkDifficultyRequest))
-                return BadRequest(ModelState);
+            //if (!ValidateAddWalkDifficultyAsync(addWalkDifficultyRequest))
+            //    return BadRequest(ModelState);
 
             var walkDiff = new Models.Domain.WalkDifficulty()
             {
@@ -79,8 +79,8 @@ namespace NZWalks.API.Controllers
             [FromBody] Models.DTO.UpdateWalkDifficultyRequest updateWalkDifficultyRequest)
         {
             // Validate request
-            if (!ValidateUpdateWalkDifficultyAsync(updateWalkDifficultyRequest))
-                return BadRequest(ModelState);
+            //if (!ValidateUpdateWalkDifficultyAsync(updateWalkDifficultyRequest))
+            //    return BadRequest(ModelState);
 
             var walkDifficulty = new Models.Domain.WalkDifficulty()
             {
